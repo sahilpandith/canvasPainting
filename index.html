@@ -28,6 +28,7 @@
   const ctx = canvas.getContext('2d');
   ctx.lineJoin = 'round';
   ctx.lineCap = 'round';
+  ctx.lineWidth = 10;
  
   let lastX =0;
   let lastY =0;
@@ -47,14 +48,14 @@
       hue =0;
     }
     hue++;
-    if(ctx.lineWidth>=100 || ctx.lineWidth <= 1){
-      direction = !direction
-    }
-    if(direction){
-      ctx.lineWidth++;
-    }else{
-      ctx.lineWidth--;
-    }
+    // if(ctx.lineWidth>=100 || ctx.lineWidth <= 1){
+    //   direction = !direction
+    // }
+    // if(direction){
+    //   ctx.lineWidth++;
+    // }else{
+    //   ctx.lineWidth--;
+    // }
 
   }
   canvas.addEventListener('mousemove' , draw);
